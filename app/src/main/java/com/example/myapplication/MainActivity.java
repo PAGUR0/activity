@@ -70,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putInt("count", count);
+        Toast.makeText(this, "onSaveInstanceState()", Toast.LENGTH_LONG).show();
         Log.d(TAG, "onSaveInstanceState");
     }
 
@@ -80,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
                 savedInstanceState.containsKey("count")) {
             count = savedInstanceState.getInt("count");
         }
+        Toast.makeText(this, "onRestoreInstanceState()", Toast.LENGTH_LONG).show();
         Log.d(TAG, "onRestoreInstanceState");
     }
 
